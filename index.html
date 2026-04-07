@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YVLYLXF7L8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-G-YVLYLXF7L8');
+
+      gtag('config', 'G-YVLYLXF7L8');
     </script>
 
     <meta charset="UTF-8">
@@ -14,31 +15,179 @@
     <title>至高の餡 bread - 匠 Anpan</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
     <style>
-        /* スタイルは前回と同様のため省略（そのままお使いいただけます） */
-        :root { --bg-color: #0a0a0a; --text-color: #ffffff; --accent-color: #c5a059; --sub-text: #999999; --card-bg: #151515; }
-        body { margin: 0; padding: 0; background-color: var(--bg-color); color: var(--text-color); font-family: 'Noto Serif JP', serif; line-height: 1.8; overflow-x: hidden; }
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #ffffff;
+            --accent-color: #c5a059;
+            --sub-text: #999999;
+            --card-bg: #151515;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Noto Serif JP', serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
         html { scroll-behavior: smooth; }
-        nav { position: fixed; top: 0; width: 100%; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(10px); box-sizing: border-box; border-bottom: 1px solid rgba(197, 160, 89, 0.2); }
-        .logo { font-size: 1.5rem; font-weight: 600; letter-spacing: 4px; color: var(--accent-color); text-decoration: none; }
-        .nav-links a { color: var(--text-color); text-decoration: none; margin-left: 30px; font-size: 0.9rem; transition: color 0.3s; }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(10px);
+            box-sizing: border-box;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
         .nav-links a:hover { color: var(--accent-color); }
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover; }
-        .hero h1 { font-size: 4.5rem; margin-bottom: 20px; letter-spacing: 12px; animation: fadeIn 2s ease-out; }
-        .hero p { font-size: 1.2rem; letter-spacing: 5px; color: var(--accent-color); margin-bottom: 40px; }
-        section { padding: 120px 10%; max-width: 1200px; margin: 0 auto; }
-        .section-title { text-align: center; margin-bottom: 80px; }
-        .section-title h2 { font-size: 2.2rem; display: inline-block; border-bottom: 1px solid var(--accent-color); padding-bottom: 15px; letter-spacing: 4px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .card { background: var(--card-bg); padding: 25px; transition: transform 0.4s, border-color 0.4s; border: 1px solid #222; text-align: center; }
-        .card:hover { transform: translateY(-10px); border-color: var(--accent-color); }
-        .card img { width: 100%; height: 250px; object-fit: cover; filter: grayscale(20%); margin-bottom: 20px; }
-        .card h3 { color: var(--accent-color); font-size: 1.4rem; margin-bottom: 10px; }
-        .cta-container { text-align: center; margin-top: 60px; }
-        .cta { display: inline-block; padding: 18px 50px; border: 1px solid var(--accent-color); color: var(--accent-color); text-decoration: none; font-size: 1rem; letter-spacing: 2px; transition: all 0.3s; cursor: pointer; background: transparent; }
-        .cta:hover { background: var(--accent-color); color: var(--bg-color); }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        footer { text-align: center; padding: 60px; font-size: 0.8rem; color: var(--sub-text); border-top: 1px solid #222; background: #050505; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; letter-spacing: 6px; } nav { padding: 15px 20px; } .nav-links { display: none; } section { padding: 80px 5%; } }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 12px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+            color: var(--accent-color);
+            margin-bottom: 40px;
+        }
+
+        section {
+            padding: 120px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            display: inline-block;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 15px;
+            letter-spacing: 4px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            transition: transform 0.4s, border-color 0.4s;
+            border: 1px solid #222;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            filter: grayscale(20%);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 18px 50px;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .cta:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            font-size: 0.8rem;
+            color: var(--sub-text);
+            border-top: 1px solid #222;
+            background: #050505;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; letter-spacing: 6px; }
+            nav { padding: 15px 20px; }
+            .nav-links { display: none; }
+            section { padding: 80px 5%; }
+        }
     </style>
 </head>
 <body>
@@ -58,6 +207,18 @@
         <a href="#menu" class="cta">品書きを拝見</a>
     </header>
 
+    <section id="concept">
+        <div class="section-title">
+            <h2>こだわり</h2>
+        </div>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>北海道の厳選された小豆を、名水で三日間かけて炊き上げる。<br>
+            バターが香る繊細な生地は、熟練の職人がその日の湿度に合わせ、<br>
+            一つひとつ手作業で包み込みます。</p>
+            <p>それはパンであって、パンではない。贅を尽くした「和菓子」の境地。</p>
+        </div>
+    </section>
+
     <section id="menu">
         <div class="section-title">
             <h2>品書き</h2>
@@ -68,7 +229,17 @@
                 <h3>特選 つぶあん</h3>
                 <p>小豆本来の食感と香りを極限まで引き出した、当店の看板。 (¥540)</p>
             </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&q=80&w=600" alt="絹ごし こしあん">
+                <h3>絹ごし こしあん</h3>
+                <p>滑らかさにこだわった餡と、ブリオッシュ生地の至福の口溶け。 (¥540)</p>
             </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=600" alt="季節の贅">
+                <h3>季節の贅（抹茶）</h3>
+                <p>宇治抹茶を贅沢に練り込んだ、香り高い季節限定の逸品。 (¥680)</p>
+            </div>
+        </div>
     </section>
 
     <section id="access">
@@ -91,11 +262,11 @@
         const buyBtn = document.getElementById('where-to-buy');
 
         buyBtn.addEventListener('click', () => {
-            // GA4へイベントを送信
+            // Google Analytics 4 イベント送信 (ID: G-YVLYLXF7L8)
             gtag('event', 'click_where_to_buy', {
                 'event_category': 'engagement',
                 'event_label': 'Where to Buy Button',
-                'location': 'Tsukuba_Moriya_Context'
+                'location': 'Ibaraki_Area_Marketing'
             });
 
             // ユーザーへの案内
@@ -104,5 +275,4 @@
     </script>
 </body>
 </html>
-
  
