@@ -17,38 +17,34 @@
         :root {
             --bg-color: #0a0a0a;
             --text-color: #ffffff;
-            --accent-color: #c5a059; /* 高級感のあるゴールド */
+            --accent-color: #c5a059;
             --card-bg: #151515;
         }
 
         body { margin: 0; background-color: var(--bg-color); color: var(--text-color); font-family: 'Noto Serif JP', serif; line-height: 1.8; }
         html { scroll-behavior: smooth; }
 
-        /* ナビゲーション */
         nav { position: fixed; top: 0; width: 100%; padding: 20px 50px; display: flex; justify-content: space-between; z-index: 1000; background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(10px); box-sizing: border-box; border-bottom: 1px solid rgba(197, 160, 89, 0.2); }
         .logo { font-size: 1.5rem; letter-spacing: 4px; color: var(--accent-color); text-decoration: none; font-weight: 600; }
 
-        /* ヒーローセクション */
         .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover; }
         .hero h1 { font-size: 4rem; margin-bottom: 20px; letter-spacing: 10px; }
 
-        /* コンテンツセクション */
         section { padding: 120px 10%; max-width: 1200px; margin: 0 auto; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
         .card { background: var(--card-bg); padding: 25px; border: 1px solid #222; text-align: center; transition: 0.3s; }
         .card:hover { border-color: var(--accent-color); }
         .card img { width: 100%; height: 250px; object-fit: cover; margin-bottom: 20px; }
 
-        /* ボタンデザイン */
         .cta { display: inline-block; padding: 18px 50px; border: 1px solid var(--accent-color); color: var(--accent-color); text-decoration: none; cursor: pointer; background: transparent; transition: 0.3s; font-family: 'Noto Serif JP', serif; }
         .cta:hover { background: var(--accent-color); color: #000; }
 
         footer { text-align: center; padding: 60px; font-size: 0.8rem; color: #999; border-top: 1px solid #222; }
 
-        /* Difyのウィジェットと重ならないよう、モバイルでの余白を調整 */
-        @media (max-width: 768px) {
-            nav { padding: 15px 20px; }
-            .hero h1 { font-size: 2.5rem; }
+        /* --- Difyボットを目立たせるための追加スタイル --- */
+        #dify-chatbot-bubble-button {
+            background-color: var(--accent-color) !important; /* ボタンをゴールドに */
+            box-shadow: 0 4px 20px rgba(197, 160, 89, 0.4) !important;
         }
     </style>
 </head>
@@ -96,7 +92,13 @@
 
     <script>
      window.difyChatbotConfig = {
-       token: 'FWW3BzxTmFD0oA3j' // 画像12のiframeソースから抽出したトークンを反映
+       token: 'FWW3BzxTmFD0oA3j',
+       baseUrl: 'https://udify.app',
+       containerProps: {
+         style: {
+           backgroundColor: '#c5a059'
+         }
+       }
      }
     </script>
     <script
@@ -106,14 +108,12 @@
     </script>
 
     <script>
-        // GA4 カスタムイベント計測ロジック
-        // ボタンが押された際、購入意欲の高いユーザーとしてカウントします
         document.getElementById('where-to-buy').addEventListener('click', () => {
             gtag('event', 'click_where_to_buy', {
                 'event_category': 'engagement',
                 'event_label': 'Tsukuba_Moriya_Area'
             });
-            alert('ただいま、つくば・守谷エリアでの出店を準備中です。最新情報はAI案内人にお尋ねください。');
+            alert('ただいま、つくば・守谷エリアでの出店を準備中です。右下の「ご質問」ボタンよりAI案内人にお尋ねください。');
         });
     </script>
 </body>
